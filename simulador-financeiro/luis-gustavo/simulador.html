@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador </title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    
+    <h1>Simulador</h1>
+
+    <div class="sense">
+
+        <ul>
+            <span>Digite a quantidade de sensores de temperatura que serão utilizados</span> <input class="input" type="text" id="qtd_temp"><br>
+            <span>Digite a quantidade de sensores de luminosidade que serão utilizados</span> <input  type="text" id="qtd_lumi"> <br><br>
+            <span style="float: left;">Valor que será gasto em sensores</span> <div class="resul" type="text" id="result"></div> 
+            <button onclick="somar()" class="bot">Calcular</button> <br>
+        </ul>
+
+        
+
+    </div>
+
+
+</body>
+</html>
+
+<script>
+
+    function somar(){
+        var gasto1 = Number(qtd_temp.value) * 9.4;
+        var gasto2 = Number(qtd_lumi.value) * 1.9;
+        var total = gasto1 + gasto2;
+
+        result.innerHTML = `o valor total é R$ ${total}`;
+       
+    } 
+
+</script>
