@@ -1,0 +1,16 @@
+input{
+    border: 2px solid black;
+}
+button{
+    background-color: #000080;
+    color: white;
+}
+h1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.borda{
+    margin: auto;
+    width: 50%;
+    border: 20px solid blue;
+    background-color: #708090;
+}
