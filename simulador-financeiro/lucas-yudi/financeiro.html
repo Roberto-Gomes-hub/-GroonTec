@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador Financeiro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Quanto você economizaria com mão de obra ?</h2> <br>
+    Digite o número de funcionários:<input placeholder="maior que 5 funcionários" type="text" id="id_numero"><br>
+    <button onclick="verificar()">verificar</button>
+    <div id="id_resuldado"></div>
+
+</body>
+</html>
+<script>
+    function verificar() {
+        var funcionario = Number (id_numero.value) * 1039;
+        var terminando = funcionario - 5500 ;
+        id_resuldado.innerHTML = `você economizaria com mão de obra ${terminando} Reais.`
+    }
+</script>
