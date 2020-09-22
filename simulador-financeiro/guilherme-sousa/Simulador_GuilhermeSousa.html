@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Simulador Financeiro</title>
+</head>
+<body>
+   <div class="caixa">  <h3 class="titulo"> SIMULAÇÃO DE LUCROS </h3>
+
+    Com o nosso produto, você verá seu faturamento subindo em uma velocidade jamais produzida. <br>
+    Verifique aqui, em anos, quanto você lucrará utilizando nossos sensores!<br><br>
+
+    Insira seu faturamento anual:<input id="in_faturamento" placeholder="Ex:1000"><br>
+    Estime um tempo de utilização(do sensor): <input id="in_anos" placeholder="Em anos"> <br><br>
+
+    <button class="botao" onclick="calcular()"> <span class="nome_b">Simular</span> </button>
+
+    <div id="calcule"></div>
+</div>
+</body>
+</html>
+<script>
+
+function calcular() {
+    
+var resultado = in_faturamento.value * 0.15
+var estima = resultado * in_anos.value
+
+    calcule.innerHTML = `
+    Seu faturamento anual é de ${in_faturamento.value} reais, você terá um lucro de ${resultado} reais ao ano.<br>
+    Em ${in_anos.value} anos você vai obter o faturamento de ${estima} reais!
+    `;
+}
+</script>

@@ -1,0 +1,16 @@
+.caixa{
+    margin: auto;
+    width: 50%;
+}
+
+.titulo{
+    color: green;
+}
+
+.botao{
+    background-color: green;
+}
+
+.nome_b{
+    color: white;
+}
