@@ -1,0 +1,11 @@
+button {
+  color: white;
+  background-color: #f54555;
+}
+
+.container {
+  width: 60%;
+  margin: auto;
+
+  text-align: center;
+}

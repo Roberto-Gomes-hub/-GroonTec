@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Simulador Financeiro - Carlos Gomes</title>
+  </head>
+  <body>
+    <div class="container">
+      Digite o tempo da safra <b>(meses)</b> <input type="text" id="meses" />
+      <button onclick="calcular()">Calcular</button>
+      <div id="resultado"></div>
+    </div>
+  </body>
+</html>
+
+<script>
+  function calcular() {
+    var n = meses.value;
+    var dias = n * 30 * 0.1;
+
+    resultado.innerHTML = `<br>Com a falta do controle de <b>luminosidade</b>, <br> 
+      sua safra demorou <b>${dias} dias</b> a mais do que o esperado.`;
+  }
+</script>
