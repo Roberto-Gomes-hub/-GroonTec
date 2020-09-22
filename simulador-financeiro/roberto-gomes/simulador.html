@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+        <h2>Simulador</h2>
+        Quilo de plantas adquiridos na safra: 
+        <br>
+        <input id="qtd_plantas">
+        <br>
+        <button onclick="calc()">Calcular perda</button>
+        <br>
+        <div id="resultado"></div>
+    </div>
+</body>
+</html>
+<script>
+    function calc(){
+        var plantas = Number(qtd_plantas.value);
+
+        var perdaPlantas = (plantas * 98)* 0.15;
+
+        resultado.innerHTML = `Você tem uma perda de plantas em R$${perdaPlantas} equivalente a 15%` ;
+    }
+</script>
