@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculadora de agua</title>
+</head>
+<body>
+<div style="background-color: aqua; height: 100px; color: rgb(202, 18, 18);"><h1><u>
+  A calculadora financeira
+</u></h1></div><br>
+<br> 
+<br><div style="float: left; background-color: white;"> <h1>
+   <i>Calcule o seu percentual de agua mensal</i></h1></div>
+ <div style="float: right;"><img id="inicial" src="regador.jpg" alt="rege sua planta"; width="50%"; height="50%"></div>
+
+ <button onclick="calculadora()">a calculadora</button>
+ <button onclick="semacalculadora()">sem a calculadora</button>
+
+<br><br><br><br><br><br><br>
+ <br><div style="background-color: aqua; height: 100px;"></div>
+ <p>
+   <h2>Nesta calculadora você poderá calcular a quantidade de agua que você utiliza na sua estufa na cutivação da
+    suas plantas ou ervas medicinais, ela é bastante util e eficiente para economizar e 
+    ter uma noção de consumo de agua, além de ser um recurso sustentável ele não trará o 
+    peso na sua carteira  </h2>
+ </p>
+ <div style="background-color: rgb(0, 89, 255); width: 100%;height: 100px;">
+  <h3><b>Vamos começar a calcular</b></h3></div>
+<h1>Insira a quantidade de agua que você gasta por mês</h1> <input id="qt_aguames">
+<button onclick="dividir()">calcular</button>
+<div id="div_resultado"></div>
+</body>
+</html>
+<script>
+  function calculadora() {
+    inicial.src ="plantacomagua.jpg"
+  }
+  function semacalculadora() {
+    inicial.src ='plantaSeca.jpg'
+  }
+
+  function dividir() {
+    var calcular = qt_aguames.value / Number (30) * Number(4);
+div_resultado.innerHTML= `<h1><span style="color: red;">Você irá economizar aproximadamente 
+${calcular},00 Reais de agua, com o nosso software</span><h1>`
+   
+   } 
+  // no nosso input eu perguntei  a quantidade de agua que o usuario gasta po mês e divide por 30 e 
+  // depois multipliquei por 4 que é o valor aproximado de uma divisão (30/7) é a quantidade do dias do mês
+  // dividido pela quantidade de dias da semana a nossa resposta é o valor aproximado que o usuario 
+  // irá economizar 
+</script>
