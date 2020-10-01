@@ -11,6 +11,9 @@ create table usuario (
     tipo char (1) not null
 );
 
+-- tipo: 1 = Produtor 
+--       2 = Cliente do Produtor
+
 insert into usuario values 
 	(null, '60.746.948/0001-12', 'Assai Atacadista', 'assai.atacadista@assai.com', 'assai123', '+55 11 22850583', '2'),
     (null, '30.533.432/0002-14', 'Boa Vista', 'boa.vista@boavista.com', 'boavista123', '+55 11 25378986', '2' ),
@@ -18,6 +21,8 @@ insert into usuario values
     (null, '69.242.676/0009-68', 'Oba', 'oba@oba.com', 'oba123', '+55 11 55338902', '1');
     
 select * from usuario;
+
+-- O nosso serviço possuirá as informações e os parâmetros de 3 ervas determinadas, babosa, gengibre e camomila
 
 create table ervas (
 	idErvas int primary key auto_increment,
@@ -30,7 +35,7 @@ create table ervas (
 
 insert into ervas values
 	(null, 'Babosa', 'Aloe vera', 'O clima da babosa é equatorial, tropical e subtropical. Ela trata feridas, queimaduras e inflamacoes na pele.', 40 , 18 ),
-    ( null, 'Camomila', 'Matricaria chamomilla', 'O clima da camomila é temperado, frio e úmido. Ela trata ansiedade e insônia.', 22, 18 ),
+    (null, 'Camomila', 'Matricaria chamomilla', 'O clima da camomila é temperado, frio e úmido. Ela trata ansiedade e insônia.', 22, 18 ),
 	(null, 'Gengibre', 'Zingiber officinale', 'O clima do gengibre é tropical e subtropical. Ele trata rouquidão e problemas na garganta.', 35, 17);
     
 select * from ervas;
