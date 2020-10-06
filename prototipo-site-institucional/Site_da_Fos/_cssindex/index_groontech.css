@@ -1,0 +1,187 @@
+body {
+    font-family: arial;
+    margin: 0;
+}
+
+
+/* MENU */
+
+.container {
+    height: 100px;
+    width: 80%;
+    margin: auto;
+}
+
+.navbar {
+    background-color:#405d27;
+    color: white;
+    height: 100px;
+}
+
+.navbar ul {
+    float: right;
+    font-weight: bold;
+}
+
+.navbar li {
+    list-style: none;
+    float: left;
+    margin-top: 25px;
+    margin-right: 20px; 
+    cursor: pointer;
+     
+}
+
+.navbar li:hover {
+   font-size: 15px;
+   font-weight: bold; 
+}
+
+.navbar img {
+    height: 90px;
+    margin-left: 60px;
+    margin-top: 5px;
+}
+
+
+/* CONTEÚDO */
+
+.texto {
+    color: black;
+    margin-top: 50px;
+    width: 50%;
+    display: inline-block;
+}
+
+.texto h1 {
+    text-transform: uppercase;
+    color: #263b12;
+    font-weight: 780;
+    text-align: center;
+    font-size: 40px;
+}
+
+.texto p {
+    text-align: center;
+    font-size: 17px;
+}
+
+.texto img {
+    height: 250px;
+    display: inline-block;
+    margin-left: 350px;
+    margin-top: -200px;
+    position: absolute;
+}
+
+/* BOTÃO */
+
+.btn {
+    border: 3px solid #263b12;
+    padding: 10px 30px;
+    color: #263b12;
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: .1em;
+    margin-left: 187px;
+    text-decoration: none;
+    border-radius: 20px;
+}
+
+.btn:hover {
+    background-color: #405d27;
+    color: white;
+    border: 1px solid #405d27;
+}
+
+
+/* TEXTO E IMAGEM */
+
+.imgtxt h1 {
+    color: #263b12;
+    margin-left: 425px;
+}
+
+.imgtxt {
+    color: black;
+    margin-right: 700px ;
+    text-align: center;
+}
+
+.imgtxt img {
+    height: 70px;
+    position: absolute;
+    margin-left: -50px;
+    margin-top: -70px;
+}
+
+.imgtxt2 {
+    color: black;
+    margin-left: 700px;
+    display: inline-block;
+    margin-top: -75px;
+    position: absolute;
+    text-align: center;
+}
+
+.imgtxt2 img {
+    height: 70px;
+    display: inline-block;
+    margin-top: -70px;
+    position: absolute;
+    margin-left: -20px;
+}
+
+.imgtxt3 {
+    color: black;
+    margin-left: 500px;
+    display: inline-block;
+    margin-top: 540px;
+    position: absolute;
+    text-align: center;
+}
+
+.imgtxt3 img {
+    height: 70px;
+    display: inline-block;
+    margin-top: -80px;
+    position: absolute;
+    margin-left: -20px;
+}
+
+
+/* RODAPÉ */
+
+.rodape {
+    width: 100%;
+    background-color: #405d27;
+    color: white;
+    padding: 20px 0;
+    margin-top: 700px;
+}
+
+.footer h3 {
+    font-size: 20px;
+}
+
+.footer ul li {
+    list-style: none;
+    margin-left: -40px;
+}
+
+.footer img {
+    height: 30px;
+    margin-left: 800px;
+    margin-top: -90px;
+    position: absolute;
+}
+
+.footer p {
+    color: white;
+    height: 30px;
+    margin-left: 770px;
+    margin-top: -30px;
+    position: absolute;
+}
