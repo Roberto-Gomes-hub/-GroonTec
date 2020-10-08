@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500');
+
+
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0;
+}
+
+.navbar {
+    color: rgb(33, 230, 8);
+    background-color:rgb(41, 43, 41);
+    height: 100px;
+    border-bottom: 6px rgb(33, 230, 8   ) solid;
+    
+}
+
+.fim {
+    height: 100vh;
+    background-image: url("carlao.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    height: 100px;
+    width: 80%;
+    margin: auto;
+    
+}
+
+.container img {
+    height: 100%;
+
+}
+
+ul {
+    float: right;
+    text-transform: uppercase;
+    cursor: pointer;
+    
+}
+
+li {
+    float: left;
+    list-style: none;
+    margin: 18px;
+    margin-left: 18px;
+    margin-top: 20px;
+}
+
+p {
+    color: rgb(8, 8, 8);
+    font-family:'montserrat';
+    margin-left: 30%;
+    margin-top: 0%;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #000;
+}
+
+h1 {
+    color: rgb(4, 5, 4);
+    margin-left: 40%;
+    margin-top: 13%;
+    font-family: 'montserrat' ;
+    -webkit-text-fill-color: rgb(4, 5, 4);
+
+}
+
+
+
