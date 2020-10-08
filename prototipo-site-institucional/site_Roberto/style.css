@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+li, a {
+    color: white;
+    font-family: "Montserrat", sans-serif;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    background-color: rgb(95, 11, 192);
+    height: 100px;
+    width: 100%;
+}
+
+.nav-bar img {
+    width: 15%;
+    float: left;
+    cursor: pointer;
+    margin-top: 40px;
+}
+
+.nav-bar ul {
+    float: left;
+    list-style-type: none;
+}
+
+.nav-bar li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav-bar li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav-bar li a:hover {
+    background-color: rgb(64, 4, 133);
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+    background-color: rgb(95, 11, 192);
+}
+
+.cont {
+    margin-left: 15%;
+    margin-top: 5%;
+}
+
+.box h1{
+    color: rgb(95, 11, 192);
+    margin-top: 30%;
+    margin-left: 20%;
+    font-size: 42px;
+}
+
+.box p {
+    margin-left: 20%;
+    font-size: 30px;
+}
+
+.box {
+    font-family: "Montserrats";
+}
+
+.text {
+    float: left;
+}
+
+.simulador h1{
+    color: rgb(95, 11, 192);
+    margin-top: 3%;
+    margin-left: 30%;
+    font-size: 42px;
+}
+
+.simulador h2{
+    margin-top: 5%;
+    margin-left: 48%;
+    color: rgb(95, 11, 192);
+}
+
+.calc {
+    margin-left: 46%;
+}
