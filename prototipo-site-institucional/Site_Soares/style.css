@@ -1,0 +1,94 @@
+body{
+    margin: 0px;
+}
+
+
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+.navbar{
+    background-color: rgb(80,162,42);
+    height: 100px;
+    width: 100%;
+    font-size: 20px;
+    position: fixed;
+}
+.login{
+    float: left;
+}
+.login ul{
+    margin-top: 40px;
+}
+.login ul li{
+    list-style: none;
+}
+.login ul li a{
+    text-decoration: none;
+    color: white;
+}
+.menu{
+    float: right;
+}
+.menu ul{
+    display: flex;
+    margin-top: 40px;
+}
+.menu ul li{
+    list-style: none;
+    margin-right: 50px;
+}
+.menu ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+
+
+
+.frontLogo{
+    text-align: center;
+   
+}
+#logo{
+    height: 150px;
+    margin-top: 7.5%;
+}
+
+
+
+.conteudo{
+    /* background-color: rgb(206, 209, 204); */
+    text-align: center;
+    margin-top: 2%;
+}
+.titulo{
+    font-size: 40px;
+    padding: 18px;
+}
+.titulodois{
+    font-size: 40px;
+    /* padding: 18px; */
+}
+.texto{
+    font-size: 21px;
+    padding: 18px;
+}
+
+
+
+.pic{
+    padding: 60px;
+    width: 250px;
+    display: inline-block;
+}
+
+
+
+.rodape{
+    height: 100px;
+    background-color: rgb(80,162,42);
+}
