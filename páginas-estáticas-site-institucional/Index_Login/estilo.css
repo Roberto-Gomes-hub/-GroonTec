@@ -1,0 +1,354 @@
+@font-face {
+    font-family: raleway;
+    src: url(raleway-VariableFont_wght.ttf)
+}
+
+body,html {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+body a{
+    color: black;
+}
+
+/* Navbar */
+.navbar{
+
+height: 50px;
+overflow: hidden;
+
+}
+.container{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.container img{
+    height: 40px;
+    float: left;
+    
+    margin-top: 5px;
+}
+
+.container button{
+    float: right;
+    margin-top: 10px;
+    margin-left: 15px; 
+
+    border-style: none;
+    padding: 7px 27px;
+    border-radius: 8px;
+
+    font-size: small;
+    font-weight: bold;
+    color: white;
+    background-color: #64d167;
+
+    transition-duration: 0.4s;
+}
+
+.container button:hover{
+    background-color: #4ca34f;
+}
+
+
+.container ul{
+    float: left;
+}
+
+.container li{
+    float: left;
+    list-style: none;
+    margin-right: 15px;
+    margin-left:20px;
+    font-weight: bold;
+    font-size: small;
+    color: gray;
+}
+
+.container a{
+    text-decoration: none;
+    float: left;
+}
+
+.div_login {
+    font-size: 5px;
+    display: none;
+    float: right;
+    margin-top: 19px;
+}
+
+.div_login input {
+    border: none;
+    border-radius: 8px;
+    background-color: rgb(236, 236, 236);
+}
+
+.div_login span {
+    float: right;
+}
+
+/* Banner */
+.banner{
+    background-image: linear-gradient(rgba(134, 134, 134, 0.5), rgba(68, 67, 67, 0.5)),url('https://dratathianepitaluga.com.br/wp-content/uploads/2018/05/fitoterapia_topo.png');
+    height: 550px;
+    background-size: 100% 100%;
+    text-align: center;
+}
+
+.banner_txt{
+
+    text-align: center;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    font-size: x-large;
+    color: white;
+    font-family: raleway;
+}
+
+#div_cadastro {
+    width: 700px;
+    height: 300px;
+    z-index: 10;
+    position: relative;
+    margin: auto;
+    background-color: white;
+    border-radius: 10px;
+    display: none;
+}
+
+.banner_txt button{
+    padding: 20px 60px;
+    border-radius: 8px;
+    color: white;
+    margin-left: 15px;
+    margin-top: 20px;
+    font-size: large;
+    border-style: none;
+    transition-duration: 0.4s;
+    background-color :#64d168a8;
+}
+
+.banner button:hover{
+    background-color: #64d168ec;
+}
+
+.break{
+    height: 50px;
+    background-color: white;
+    width: 100%;
+}
+
+ /* -- div Vantagens -- */
+.div_vantagens{
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2), 0 2px 5px 0 rgba(0, 0, 0, 0.19);  
+    height: 400px; 
+    margin: 50px;
+
+}
+
+.vantagensh1{
+    text-align: center; 
+    font-family: raleway;
+    font-size: large;
+
+    margin-bottom: 100px;
+    padding-top: 30px;
+
+}
+
+.box_vantagens{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: raleway;
+    height: 150px;
+}
+
+.box_vantagens img{
+    height: 60px;
+}
+.box_vantagens div{
+    text-align: center;
+    width: 400px;
+   
+
+}
+.box_vantagens p{
+    margin-left: 15px;
+    margin-right: 15px;
+    font-weight: bold;
+}
+/* -- Responsividade Vantagens -- */
+@media (max-width: 800px) {
+    .div_vantagens{
+        height: 700px;
+    }
+    .box_vantagens {
+        flex-direction: column;
+        margin-top: 200px;
+      }
+
+    
+  }
+
+@media (max-width: 800px) {
+    .box_vantagens {
+      flex-direction: column;
+      margin-top: 200px;
+    }
+  }
+
+/* div sobre */
+.sobre{
+    background-image: linear-gradient(to right,rgba(121, 178, 16, 0.651), rgba(121, 178, 16, 0.479));
+    height: 300px;
+    margin-left: 7%;
+    margin-right: 7%;
+    border-radius: 15px;
+    font-family: raleway;
+    text-align: center;
+    color: rgb(65, 62, 62);
+}
+
+.sobre img{
+    /* logo */
+    height: 70px;
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.sobre h1{
+    margin: 0;
+    margin-bottom: 30px;
+    font-size: x-large;
+}
+.sobre p {
+    padding: 0 50px 0 50px;
+    
+    text-align: center;
+    font-weight: bold;
+    line-height: 30px;
+}
+
+/* Responsividade Sobre */
+@media (max-width: 900px) {
+    .sobre{
+        height: 800px;
+    }
+}
+
+/* -- Serviços -- */
+
+.div_sobre{
+    display: flex;
+    padding: 10px;
+}
+.column_sobre7{
+    flex: 7%;
+    max-width: 7%;
+}
+.column_sobre25{
+    flex: 25%;
+    max-width: 25%;
+    padding: 5px;
+}
+.column_sobre25 div{
+    border-radius: 15px;
+    background-size: 100% 100%;
+}
+
+.column_sobre61{
+    flex: 61%;
+    max-width: 61%;
+    padding: 5px;
+}
+.column_sobre61 div{
+    border-radius: 15px;
+    margin-bottom: 5px;
+    text-align: center;
+    font-family: raleway;
+    
+}
+
+.div61_1 p{
+    margin: 30px 100px 0 100px ;
+    font-weight: bold;
+    line-height: 30px;
+}
+
+.sim_button{    
+    border-style: none;
+    padding: 0px 27px 10px;
+    border-radius: 8px;
+    
+    vertical-align: middle;
+    font-size: small;
+    font-weight: bold;
+    color: white;
+    background-color: #82db85;
+
+    transition-duration: 0.4s;
+}
+
+.sim_button:hover{
+    background-color: #4ca34f;
+}
+#calcule{
+    background-color: white;
+    border-radius: 15px;
+    padding: 50px;
+}
+
+/*  -- Footer  -- */
+
+.rodape {
+    width: 100%;
+    background-color: #405d27;
+    color: white;
+    padding: 20px 0;
+    height: 100px;
+    margin-bottom: 0;
+}
+
+.footer h3 {
+    font-size: 20px;
+    margin-top: 0;
+}
+.footer ul{
+    padding: 0px;
+    margin-top: -15px;
+   
+}
+
+.footer ul li {
+    list-style: none;
+    margin: 0px;
+    float: none;
+    margin-top: 10px;
+    color: white;
+    font-family: raleway;
+
+}
+
+.footer img {
+    height: 30px;
+    float: right;
+    margin-top: 30px;
+    text-align: right;
+    
+}
+
+.footer p {
+    color: white;
+    height: 30px;
+    margin-top: 10px;
+ 
+}
+.footer_right{
+    text-align: right;
+}

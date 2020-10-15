@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groontech</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+
+<!-- Header -->
+
+<body>
+    <section>
+        <div class="navbar">
+            <div class="container">
+                <img src="./Groontech-removebg.png" alt="Groontech">
+
+                <button onclick= 'display_login ()'>Login</button>
+
+                <div class= 'div_login' id= 'id_login'>
+                    <label for="email"><b>Email:</b> </label>
+                    <input type="text" placeholder="Email" name="email" required> 
+                
+                    <label for="senha"><b>Senha:</b></label>
+                    <input type="password" placeholder="Senha" name="senha" required> <br>
+                    <span>Esqueceu a senha</span>
+                </div>
+
+                <ul>
+                    <li>Home</li>
+                    <li><a href="#section_sobre">Sobre<a></li>
+                    <li>Contato</li>
+                    <li>Serviços</li>
+                </ul>
+
+            </div>
+        </div>
+
+        <div class="borda"></div>
+    </section>
+
+    <!-- Banner -->
+    <section>
+        <div class="banner">
+            <div class="banner_txt">
+                <h1>Groontech</h1>
+                <p>Soluções em monitoramento de estufas fitoterápicas</p>
+
+                
+                <button class="button_cadastro" onclick= 'display_cadastro ()'>Cadastre-se</button>
+                <button class="button_saiba">Saiba mais</button>
+                
+            </div>
+                    <div id='div_cadastro'>
+
+                        <label for="email"><b>Email:</b> </label> <br>
+                        <input type="text" placeholder="Email" name="email" required> <br>
+
+                        <label for="confemail"><b>Confirmar Email:</b> </label> <br>
+                        <input type="text" placeholder="Confirmar Email" name="confemail" required> <br>
+
+                        <label for="Razão social"><b>Razão social:</b> </label><br>
+                        <input type="text" placeholder="Razão social" name="razaosoc" required> <br>
+
+                        <label for="cnpj"><b>CNPJ:</b> </label><br>
+                        <input type="text" placeholder="CNPJ" name="cnpj" required> <br>
+                
+                        <label for="senha"><b>Senha:</b></label><br>
+                        <input type="password" placeholder="Senha" name="senha" required> <br>
+
+                        <label for="senha"><b>Confirmar Senha:</b></label><br>
+                        <input type="password" placeholder="Confirmar Senha" name="confsenha" required> <br>
+
+                        <button>Cadastro</button> <button onclick= 'hide_cadastro ()'>Voltar</button>
+
+                    </div>
+        </div>
+
+        <div class="break"></div>
+
+
+        <!-- Conteúdo -->
+    </section>
+
+
+    <section id="section_sobre">
+
+        <div class=" div_vantagens">
+
+            <div class="vantagensh1">
+                <h1>VANTAGENS</h1>
+            </div>
+            <div class='box_vantagens'>
+
+                <div>
+                    <img src='_imgindex/img_03_card.png'>
+                    <p>Veja seus lucros aumentarem <br>
+                        consideravelmente.</p>
+                </div>
+
+                <div>
+                    <img src='_imgindex/img_04_light.png'>
+                    <p>Monitoramento da temperatura e luminosidade <br>
+                        no ambiente em tempo real.</p>
+                </div>
+
+
+                <div>
+                    <img src='_imgindex/img_07_plant.png'>
+                    <p>Otimização do tempo de produção e <br>
+                        redução das perdas de produto.</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="sobre">
+            <img src="./_imgindex/img_02_logo.png">
+            <h1>Nosso Trabalho</h1>
+            <p>A Groontech está aqui para resolver problemas críticos que nossos clientes, grandes ou pequenos,
+                enfrentam;
+                a má gestão de suas estufas.
+                Nossa abordagem não é apenas o que nos diferencia,
+                mas também o que nos faz uma empresa de sucesso.
+                Oferecemos uma solução simples para ajudar empresas a mudarem,
+                a alcançarem seus objetivos e otimizar o seu desempenho e produtividade.</p>
+        </div>
+
+    </section>
+
+    <section id="servicos">
+        <div class='div_sobre'>
+            <div class="column_sobre7"></div>
+
+            <div class='column_sobre25'>
+                <div style="background-image: url(./_imgindex/servico.jpg); height: 500px;"></div>
+            </div>
+
+            <div class='column_sobre61'>
+                <div class='div61_1' style='background-color: rgba(121, 178, 16, 0.651); height: 500px;'>
+                    <h1 style="margin-top: 0;">Simulador de financeiro</h1>
+                    <p style="margin: 0px 100px 0 100px ">Verifique aqui, em anos, quanto você lucrará utilizando nossos
+                        sensores!</p>
+
+                    <p>Insira seu faturamento anual:</p><input id="in_faturamento">
+                    <p> Estime um tempo de utilização(do sensor):</p> <input id="in_anos" placeholder="Em anos">
+                    <button onclick="calcular()" class="sim_button">
+                        <br>
+                        Calcular</button>
+                    <p id="calcule"></p>
+                </div>
+            </div>
+           
+           
+            <div class="column_sobre7"></div>
+        </div>
+    </section>
+
+    <div class="break"></div>
+
+    <!-- RODAPÉ -->
+<section id="footer">
+
+    <div class='rodape'>
+        <div class= 'container'>
+            <div class= 'footer'>
+                <h3> CONTATO </h3>
+                <ul>
+                <li>+55 (11) 4568-1234 </li>
+                <li>+55 (11) 91234-9876</li>
+                <li>groontech@suporte.com.br</li>
+            </ul>
+         
+           <div class="footer_right">  
+            <img src= '_imgindex/img_06_redes.png'>
+            
+           </div>
+        </div>
+    </div>
+</div>
+</section>
+
+
+</body>
+
+</html>
+
+
+<script>
+
+    function calcular() {
+
+        var resultado = in_faturamento.value * 0.15
+        var estima = resultado * in_anos.value
+       
+        calcule.innerHTML = `
+        Seu faturamento anual é de R$${in_faturamento.value}, você terá um lucro de R$${resultado.toFixed(2)} ao ano. <br>
+        Em ${in_anos.value} anos você vai obter R$${estima.toFixed(2)} em lucros!
+        `;
+    }
+    
+    function display_login () {
+        // if (id_login.style.display == 'block') {
+        //     alert('Oi, deu erro');
+        // }
+
+        id_login.style.display= 'block';
+
+    }
+    
+    function display_cadastro () {
+        div_cadastro.style.display= 'block';
+    }
+
+    function hide_cadastro () {
+        div_cadastro.style.display= 'none';
+    }
+
+</script>
