@@ -20,12 +20,12 @@
                 <button onclick= 'display_login ()'>Login</button>
 
                 <div class= 'div_login' id= 'id_login'>
-                    <label for="email"><b>Email:</b> </label>
+                    <label for="email" style="font-size:14px"><b>Email:</b> </label>
                     <input type="text" placeholder="Email" name="email" required> 
                 
-                    <label for="senha"><b>Senha:</b></label>
+                    <label for="senha" style="font-size:14px"><b>Senha:</b></label>
                     <input type="password" placeholder="Senha" name="senha" required> <br>
-                    <span>Esqueceu a senha</span>
+                    <span  style="font-size:10px">Esqueceu a senha</span>
                 </div>
 
                 <ul>
@@ -44,7 +44,7 @@
     <!-- Banner -->
     <section>
         <div class="banner">
-            <div class="banner_txt">
+            <div class="banner_txt" id="banner">
                 <h1>Groontech</h1>
                 <p>Soluções em monitoramento de estufas fitoterápicas</p>
 
@@ -53,7 +53,7 @@
                 <button class="button_saiba">Saiba mais</button>
                 
             </div>
-                    <div id='div_cadastro'>
+                    <div class='div_cadastro' id="cadastro">
 
                         <label for="email"><b>Email:</b> </label> <br>
                         <input type="text" placeholder="Email" name="email" required> <br>
@@ -73,7 +73,7 @@
                         <label for="senha"><b>Confirmar Senha:</b></label><br>
                         <input type="password" placeholder="Confirmar Senha" name="confsenha" required> <br>
 
-                        <button>Cadastro</button> <button onclick= 'hide_cadastro ()'>Voltar</button>
+                        <button class="btnCad">Cadastro</button> <button class="btnCad" onclick= 'hide_cadastro ()'>Voltar</button>
 
                     </div>
         </div>
@@ -211,11 +211,13 @@
     }
     
     function display_cadastro () {
-        div_cadastro.style.display= 'block';
+        cadastro.style.display= 'block';
+        banner.style.display= 'none'
     }
 
     function hide_cadastro () {
-        div_cadastro.style.display= 'none';
+        cadastro.style.display= 'none';
+        banner.style.display= 'block'
     }
 
 </script>

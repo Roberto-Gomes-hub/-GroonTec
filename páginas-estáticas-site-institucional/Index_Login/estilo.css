@@ -76,7 +76,7 @@ overflow: hidden;
     font-size: 5px;
     display: none;
     float: right;
-    margin-top: 19px;
+    margin-top: 15px;
 }
 
 .div_login input {
@@ -92,13 +92,13 @@ overflow: hidden;
 /* Banner */
 .banner{
     background-image: linear-gradient(rgba(134, 134, 134, 0.5), rgba(68, 67, 67, 0.5)),url('https://dratathianepitaluga.com.br/wp-content/uploads/2018/05/fitoterapia_topo.png');
-    height: 550px;
+    height: 95vh;
     background-size: 100% 100%;
     text-align: center;
 }
 
 .banner_txt{
-
+    float: left;
     text-align: center;
     position: relative;
     top: 50%;
@@ -110,15 +110,35 @@ overflow: hidden;
     font-family: raleway;
 }
 
-#div_cadastro {
-    width: 700px;
+.div_cadastro {
+    width: 250px;
     height: 300px;
     z-index: 10;
     position: relative;
+    float: left;
     margin: auto;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.514);
     border-radius: 10px;
     display: none;
+    margin-top: 6%;
+    margin-left: 40%;
+}
+
+.btnCad {
+    float: right;
+    margin-top: 10px;
+    margin-left: 15px; 
+
+    border-style: none;
+    padding: 7px 27px;
+    border-radius: 8px;
+
+    font-size: small;
+    font-weight: bold;
+    color: white;
+    background-color: #64d167;
+
+    transition-duration: 0.4s;
 }
 
 .banner_txt button{
