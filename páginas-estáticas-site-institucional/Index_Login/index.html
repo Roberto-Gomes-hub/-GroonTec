@@ -16,15 +16,17 @@
         <div class="navbar">
             <div class="container">
                 <img src="./Groontech-removebg.png" alt="Groontech">
-
-                <button onclick= 'display_login ()'>Login</button>
-
-                <div class= 'div_login' id= 'id_login'>
+               
+                <button onclick= 'display_login()'>Login</button>
+                    <div id="div_result"></div>
+                
+            
+                <div class= 'div_login' id= 'id_login' style="display: none;">
                     <label for="email" style="font-size:14px"><b>Email:</b> </label>
-                    <input type="text" placeholder="Email" name="email" required> 
+                 <input id="in_email" type="text" placeholder="Email" name="email" required> 
                 
                     <label for="senha" style="font-size:14px"><b>Senha:</b></label>
-                    <input type="password" placeholder="Senha" name="senha" required> <br>
+                    <input id="in_senha" type="password" placeholder="Senha" name="senha" required> <br>
                     <span  style="font-size:10px">Esqueceu a senha</span>
                 </div>
 
@@ -181,7 +183,7 @@
     </div>
 </div>
 </section>
-
+    <!-- criando paginas de logins idividuais -->
 
 </body>
 
@@ -201,15 +203,37 @@
         `;
     }
     
-    function display_login () {
+    function display_login() {
         // if (id_login.style.display == 'block') {
         //     alert('Oi, deu erro');
         // }
+        
+        var email = in_email.value;
+        var senha = in_senha.value;
 
-        id_login.style.display= 'block';
+        if (document.getElementById('id_login').style.display== 'none') {
+            document.getElementById('id_login').style.display = 'block';
+        }
+
+        else if (document.getElementById('id_login').style.display == "block") {
+            if (email == '@gmail' && senha == 'groontech') {
+                alert( `acesso permitido`);
+                window.location.href = '..\Dashboards\Dashboards.html';
+            }
+            else if (email == '' && senha == '') {
+                alert(`preencha todos os campos`);
+            }
+            else {
+                alert('email ou senha invalida')  
+            }
+        }  
+        else{
+            alert('asda')
+        }
 
     }
     
+
     function display_cadastro () {
         cadastro.style.display= 'block';
         banner.style.display= 'none'
@@ -219,5 +243,7 @@
         cadastro.style.display= 'none';
         banner.style.display= 'block'
     }
+
+    
 
 </script>
