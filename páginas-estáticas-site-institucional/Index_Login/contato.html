@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groontech</title>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groontech</title>
+    <link rel="stylesheet" href="_css/estilo_contato.css">
+</head>
+
+
+<!-- Header -->
+
+<body>
+    <section>
+        <div class="navbar">
+            <div class="container">
+                <img src="./Groontech-removebg.png" alt="Groontech">
+
+                <button onclick= 'display_login ()'>Login</button>
+
+                <div class= 'div_login' id= 'id_login'>
+                    <label for="email" style="font-size:14px"><b>Email:</b> </label>
+                    <input type="text" placeholder="Email" name="email" required> 
+                
+                    <label for="senha" style="font-size:14px"><b>Senha:</b></label>
+                    <input type="password" placeholder="Senha" name="senha" required> <br>
+                    <span  style="font-size:10px">Esqueceu a senha</span>
+                </div>
+
+                <ul>
+                    <li>Home</li>
+                    <li>Sobre</li>
+                    <li>Contato</li>
+                    <li>Serviços</li>
+                </ul>
+
+            </div>
+        </div>
+
+        <div class="borda"></div>
+    </section>
+
+    <!-- Banner -->
+    <section>
+        <div class="banner">
+            <div class="banner_txt" id="banner">
+            
+                Nome:
+                <input type= "text"> <br>
+
+                Email:
+                <input type= 'text'> <br>
+
+                Telefone:
+                <input type= 'text'> <br>
+
+                Mensagem:
+                <input type= 'text'> <br>
+
+                <button onclick= 'bt_enviar ()'> Enviar </button>
+
+
+            </div>
+        </div>    
+    
+
+</body>
+</html>
+<script>
+
+function display_login () {
+        // if (id_login.style.display == 'block') {
+        //     alert('Oi, deu erro');
+        // }
+
+        id_login.style.display= 'block';
+
+    }
+
+</script>

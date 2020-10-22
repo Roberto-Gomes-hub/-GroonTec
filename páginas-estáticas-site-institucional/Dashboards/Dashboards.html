@@ -139,6 +139,19 @@
 
                     <div class="card_setor" id="setor2">
                         <h2>Setor 2</h2>
+<<<<<<< HEAD
+=======
+                        <select id="in_erva" class="select_erva" onchange="mudar_erva()">
+                            <option value="0"> -- Selecione erva --</option>
+                            <option value="camomila"> Camomila </option>
+                            <option value="babosa"> Babosa </option>
+                            <option value="gengibre"> Gengibre </option>
+                            
+                        </select>
+
+
+
+>>>>>>> 2e39df1886689bdcecd5cb6082c0941615bc5d3f
                     </div>
 
 
@@ -359,7 +372,7 @@
 			// agendar a chamada da mesma função para daqui a 7 segundos
 			receberNovasLeituras();	
 
-            document.getElementById('setor1_registro').innerHTML=`${sortearTemperatura()} ºC`
+            document.getElementById('setor1_registro').innerHTML=`${novoRegistro.leitura} ºC`
 
 		}, 1000); // 7000 ms -> 7 segundos
 	}
