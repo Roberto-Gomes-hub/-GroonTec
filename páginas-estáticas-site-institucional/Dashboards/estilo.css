@@ -1,0 +1,259 @@
+@font-face {
+    font-family: raleway;
+    src: url(raleway-VariableFont_wght.ttf)
+}
+
+body,html {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+body a{
+    color: black;
+}
+
+/* Navbar */
+.navbar{
+
+height: 50px;
+overflow: hidden;
+
+}
+.container{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.container img{
+    height: 40px;
+    float: left;
+    
+    margin-top: 5px;
+}
+
+.container button{
+    float: right;
+    margin-top: 10px;
+    margin-left: 15px; 
+
+    border-style: none;
+    padding: 7px 27px;
+    border-radius: 8px;
+
+    font-size: small;
+    font-weight: bold;
+    color: white;
+    background-color: #64d167;
+
+    transition-duration: 0.4s;
+}
+
+.container button:hover{
+    background-color: #4ca34f;
+}
+
+
+.container ul{
+    float: left;
+}
+
+.container li{
+    float: left;
+    list-style: none;
+    margin-right: 15px;
+    margin-left:20px;
+    font-weight: bold;
+    font-size: small;
+    color: gray;
+}
+
+.container a{
+    text-decoration: none;
+    float: left;
+}
+
+.div_login {
+    font-size: 5px;
+    display: none;
+    float: right;
+    margin-top: 15px;
+}
+
+.div_login input {
+    border: none;
+    border-radius: 8px;
+    background-color: rgb(236, 236, 236);
+}
+
+.div_login span {
+    float: right;
+}
+
+/* dashboards*/
+.banner{
+    height: 120px;
+    width: 100%;
+    background-color: #64d167;
+    z-index: 10;
+
+}
+
+.banner h3{
+    padding-top: 30px;
+    padding-left: 30px;
+    color: white;
+}
+
+
+.dashboard{
+    height: 2000px;
+}
+.div_estufa{
+display: flex;
+justify-content: center;
+width: 100%;
+height: 250px;
+z-index: 40;
+
+}
+.card_estufa{
+    height: 250px;
+    width: 200px;
+    background-color: rgb(244,241,241);
+    border-radius: 15px;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2), 2px 5px 5px 2px rgba(0, 0, 0, 0.19);
+    text-align: center;
+    float: left;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+
+.card_estufa h1{
+    font-size: 40px;
+    color: #58e25d;
+}
+
+
+.img_estufa{
+    height: 70px ;
+
+
+}
+  
+.div_setor{
+display: grid;
+place-items: center;
+
+}
+
+.card_setor{
+    height: 500px;
+    width: 500px;
+    background-color: rgb(244,241,241); 
+    border-radius: 15px;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2), 2px 5px 5px 2px rgba(0, 0, 0, 0.19);
+    margin: 20px;
+
+}
+
+.card_setor h2{
+    padding-left: 30px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+
+#setor1{
+    grid-row: 1/2;
+    grid-column: 1/2;
+}
+#setor2{
+    grid-row: 1/2;
+    grid-column: 2/2;
+}
+#setor3{
+    grid-row: 2/2;
+    grid-column: 1/2;
+}
+
+
+.select_erva{
+    position: relative;
+    background-color: #58e25d ;
+    border: none;
+    padding: 10px;
+    left: 170px;
+    top: 15px;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    border-radius: 10px;
+}
+
+.select_erva option{
+    background-color: #58e25d ;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+  
+    
+}
+
+.div_canva{
+    position: relative;
+    width: 85%;
+    top: 25px;
+    left: 35px;
+}
+
+
+/*  -- Footer  -- */
+
+.rodape {
+    width: 100%;
+    background-color: #405d27;
+    color: white;
+    padding: 20px 0;
+    height: 100px;
+    margin-bottom: 0;
+}
+
+.footer h3 {
+    font-size: 20px;
+    margin-top: 0;
+}
+.footer ul{
+    padding: 0px;
+    margin-top: -15px;
+   
+}
+
+.footer ul li {
+    list-style: none;
+    margin: 0px;
+    float: none;
+    margin-top: 10px;
+    color: white;
+    font-family: raleway;
+
+}
+
+.footer img {
+    height: 30px;
+    float: right;
+    margin-top: 30px;
+    text-align: right;
+    
+}
+
+.footer p {
+    color: white;
+    height: 30px;
+    margin-top: 10px;
+ 
+}
+.footer_right{
+    text-align: right;
+}

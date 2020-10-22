@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://www.chartjs.org/dist/2.9.3/Chart.min.js"></script>
+    <script src="https://www.chartjs.org/samples/latest/utils.js"></script>
+    <style>
+        canvas {
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+        }
+    </style>
+    <title>Groontech</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+
+<!-- Header -->
+
+<body>
+    <section>
+        <div class="navbar">
+            <div class="container">
+                <img src="./Groontech-removebg.png" alt="Groontech">
+
+                <button onclick='display_login ()'>Login</button>
+
+                <div class='div_login' id='id_login'>
+                    <label for="email" style="font-size:14px"><b>Email:</b> </label>
+                    <input type="text" placeholder="Email" name="email" required>
+
+                    <label for="senha" style="font-size:14px"><b>Senha:</b></label>
+                    <input type="password" placeholder="Senha" name="senha" required> <br>
+                    <span style="font-size:10px">Esqueceu a senha</span>
+                </div>
+
+                <ul>
+                    <li>Home</li>
+                    <li><a href="#section_sobre">Sobre<a></li>
+                    <li>Contato</li>
+                    <li>Serviços</li>
+                </ul>
+
+            </div>
+        </div>
+
+        <div class="borda"></div>
+    </section>
+
+    <!-- Dashboards -->
+
+    <section>
+
+
+
+        <div class="dashboard">
+            <div class="banner">
+
+                <h3></h3>
+
+
+                <div class="div_estufa">
+
+                    <div class="card_estufa">
+                        <h2>Estufa A</h2>
+
+                        <img src="https://cdn.discordapp.com/attachments/760209881055363106/768247556990828544/3227706.png"
+                            alt="" class='img_estufa'>
+
+                        <h1>25ºC</h1>
+
+
+                    </div>
+
+                    <div class="card_estufa">
+                        <h2>Estufa B</h2>
+
+                        <img src="https://cdn.discordapp.com/attachments/760209881055363106/768247556990828544/3227706.png"
+                            alt="" class='img_estufa'>
+
+                        <h1>20ºC</h1>
+
+
+                    </div>
+                    <div class="card_estufa">
+                        <h2>Estufa C</h2>
+
+                        <img src="https://cdn.discordapp.com/attachments/760209881055363106/768247556990828544/3227706.png"
+                            alt="" class='img_estufa'>
+
+                        <h1>23ºC</h1>
+
+
+                    </div>
+
+                    <div class="card_estufa">
+                        <h2>Adicionar <br> estufa </h2>
+
+                        <img src="./_imgindex/adicionar.png" alt="" class='img_estufa'>
+
+
+
+
+                    </div>
+                </div>
+
+
+                <div class="div_setor">
+                    <div class="card_setor" id="setor1">
+                        <h2>Setor 1
+                            <img src="" id='img_erva_setor1' style="height:30px">
+                        
+                     
+
+                        </h2>
+                        <h2 id="setor1_registro">ºC  -  lm</h2>
+                       
+                        <select id="in_erva" class="select_erva" onchange="mudar_erva()">
+                            <option value="0"> -- Selecione erva --</option>
+                            <option value="camomila"> Camomila </option>
+                            <option value="babosa"> Babosa </option>
+                            <option value="gengibre"> Gengibre </option>
+                            
+                        </select>
+                        <div class="div_canva">
+                            <canvas id="c_grafico"></canvas>
+                        </div>
+                       
+                        <div>
+                            <canvas></canvas>
+                        </div>
+                       
+
+                    </div>
+
+
+                    <div class="card_setor" id="setor2">
+                        <h2>Setor 2</h2>
+
+                    </div>
+
+
+                    <div class="card_setor" id="setor3">
+                        <h2>Setor 3</h2>
+
+                    </div>
+
+
+                    <div class="card_setor" id="setor4">
+                        <h2>Setor 4</h2>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+
+        </div>
+
+
+    </section>
+
+
+    <!-- RODAPÉ -->
+    <section id="footer">
+
+        <div class='rodape'>
+            <div class='container'>
+                <div class='footer'>
+                    <h3> CONTATO </h3>
+                    <ul>
+                        <li>+55 (11) 4568-1234 </li>
+                        <li>+55 (11) 91234-9876</li>
+                        <li>groontech@suporte.com.br</li>
+                    </ul>
+
+                    <div class="footer_right">
+                        <img src='_imgindex/img_06_redes.png'>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</body>
+
+</html>
+
+
+<script>
+
+
+
+    function display_login() {
+        // if (id_login.style.display == 'block') {
+        //     alert('Oi, deu erro');
+        // }
+
+        id_login.style.display = 'block';
+
+    }
+
+    function display_cadastro() {
+        cadastro.style.display = 'block';
+        banner.style.display = 'none'
+    }
+
+    function hide_cadastro() {
+        cadastro.style.display = 'none';
+        banner.style.display = 'block'
+    }
+
+
+    function mudar_erva(){
+       var erva=in_erva.value
+       
+        document.getElementById('img_erva_setor1').src=`./_imgindex/${erva}.png`
+
+        
+    }
+
+
+
+    var config = {
+		type: 'line',
+		data: {
+			labels: [],
+			datasets: [{
+				label: 'Temperatura',
+				backgroundColor: window.chartColors.blue,
+				borderColor: window.chartColors.blue,
+				data: [],
+				fill: false,
+			}]
+		},
+		options: {
+			responsive: true,
+			title: {
+				display: true,
+				text: 'Gráfico de histórico de temperatura'
+			},
+			tooltips: {
+				mode: 'index',
+				intersect: false,
+			},
+			hover: {
+				mode: 'nearest',
+				intersect: true
+			},
+			scales: {
+				xAxes: [{
+					display: true,
+					scaleLabel: {
+						display: true,
+						labelString: 'Horário da Leitura'
+					}
+				}],
+				yAxes: [{
+					display: true,
+					scaleLabel: {
+						display: true,
+						labelString: 'ºC'
+					}
+				}]
+			}
+		}
+	};
+
+	// esse "sortearTemperatura()" será desnecessário quando usarmos o backend futuramente
+	function sortearTemperatura() {
+		var limiteMin = -10;
+		var limiteMax = 70;
+		var minimoAbsoluto = Math.abs(limiteMin);
+		return (Math.random() * (minimoAbsoluto+limiteMax) - minimoAbsoluto).toFixed(1);
+	}
+
+	function recuperarDadosIniciais() {
+
+		// esse "registros" será recuperado do backend futuramente
+		var registros = [
+			{
+				momento: '00:03:42',
+				leitura: sortearTemperatura()
+			},
+			{
+				momento: '00:03:52',
+				leitura: sortearTemperatura()
+			},
+			{
+				momento: '00:04:02',
+				leitura: sortearTemperatura()
+			},
+			{
+				momento: '00:04:12',
+				leitura: sortearTemperatura()
+			},
+			{
+				momento: '00:04:22',
+				leitura: sortearTemperatura()
+			},
+			{
+				momento: '00:04:32',
+				leitura: sortearTemperatura()
+			},
+			{
+				momento: '00:04:42',
+				leitura: sortearTemperatura()
+			}
+		];
+
+		var contador = 0;
+
+		// registros.length é a quantidade de itens em "registros"
+		while (contador < registros.length) {
+
+			config.data.labels.push(registros[contador].momento);  // incluir um novo momento
+			config.data.datasets[0].data.push(registros[contador].leitura);  // incluir uma nova leitura
+
+			contador++;
+		}
+
+	}
+	
+    function receberNovasLeituras() {
+		setTimeout(() => {
+			
+			// esses "agora" etc até "momentos" serão desnecessários quando usarmos o backend futuramente
+			var agora = new Date();
+			var hora = agora.getHours();
+			var minuto = agora.getMinutes();
+			var segundo = agora.getSeconds();
+			var momento = `${hora>9?'':'0'}${hora}:${minuto>9?'':'0'}${minuto}:${segundo>9?'':'0'}${segundo}`;
+
+			// esse "novoRegistro" será recuperado do backend futuramente
+			var novoRegistro = {
+				momento: momento,
+				leitura: sortearTemperatura()
+			};
+			
+			// tirando e colocando valores no gráfico
+			config.data.labels.shift(); // apagar o primeiro
+			config.data.labels.push(novoRegistro.momento); // incluir um novo momento
+			config.data.datasets[0].data.shift();  // apagar o primeiro
+			config.data.datasets[0].data.push(novoRegistro.leitura); // incluir uma nova leitura
+
+			// Atualiza o gráfico
+			window.graficoLinha.update();	
+
+			// agendar a chamada da mesma função para daqui a 7 segundos
+			receberNovasLeituras();	
+
+            document.getElementById('setor1_registro').innerHTML=`${sortearTemperatura()} ºC`
+
+		}, 1000); // 7000 ms -> 7 segundos
+	}
+
+	function plotarGrafico() {
+		// chamar os 7 últimos registros de leitura
+		recuperarDadosIniciais();
+        receberNovasLeituras();
+		// criação do gráfico na página
+		var ctx = document.getElementById('c_grafico').getContext('2d');
+		window.graficoLinha = new Chart(ctx, config);
+
+		// função que agenda a recuperação da última leitura para daqui a 7 segundos
+		//receberNovasLeituras();
+	}
+
+	// indicando que a função "plotarGrafico" será invocada assim que a página carregar
+	window.onload = plotarGrafico;
+
+ 
+
+</script>
