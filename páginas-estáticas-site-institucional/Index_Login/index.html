@@ -31,9 +31,9 @@
                 </div>
 
                 <ul>
-                    <li>Home</li>
+                    <li><a href="">Home</a></li>
                     <li><a href="#section_sobre">Sobre<a></li>
-                    <li>Contato</li>
+                    <li ><a href="./contato.html">Contato</a></li>
                     <li>Serviços</li>
                 </ul>
 
@@ -44,7 +44,7 @@
     </section>
 
     <!-- Banner -->
-    <section>
+    <section id="section_banner">
         <div class="banner">
             <div class="banner_txt" id="banner">
                 <h1>Groontech</h1>
@@ -188,6 +188,7 @@
 
 </body>
 
+
 </html>
 
 
@@ -218,8 +219,7 @@
 
         else if (document.getElementById('id_login').style.display == "block") {
             if (email == '@gmail' && senha == 'groontech') {
-                alert( `acesso permitido`);
-                window.location.href = '..\Dashboards\Dashboards.html';
+                window.location.href = '../Dashboards/Dashboards.html';
             }
             else if (email == '' && senha == '') {
                 alert(`preencha todos os campos`);
