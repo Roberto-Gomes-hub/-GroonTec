@@ -55,16 +55,25 @@
     <section>
 
 
+        <div id="id_divMenu" class='menu_user'>
 
-        <div class="dashboard">
+            <a href="javascript:void(0)" onclick="fechar_menu()">&times;</a>
+            texto
+        </div>
+
+
+        <div style="background-color: white; height:30px;"></div>
+
+        <div class="dashboard" id="id_divDashboard">
             <div class="banner">
 
                 <h3></h3>
 
+                <button onclick="mostrar_menu()">Menu</button>
 
                 <div class="div_estufa">
 
-                    <div class="card_estufa">
+                    <div class="card_estufa" onclick="exibirSetorA()" id="cardA">
                         <h2>Estufa A</h2>
 
                         <img src="https://cdn.discordapp.com/attachments/760209881055363106/768247556990828544/3227706.png"
@@ -75,13 +84,13 @@
 
                     </div>
 
-                    <div class="card_estufa">
+                    <div class="card_estufa" onclick="exibirSetorB()" id="cardB">
                         <h2>Estufa B</h2>
 
                         <img src="https://cdn.discordapp.com/attachments/760209881055363106/768247556990828544/3227706.png"
                             alt="" class='img_estufa'>
 
-                        <h1>20ºC</h1>
+                        <h1 style="color: black;">--</h1>
 
 
                     </div>
@@ -91,7 +100,7 @@
                         <img src="https://cdn.discordapp.com/attachments/760209881055363106/768247556990828544/3227706.png"
                             alt="" class='img_estufa'>
 
-                        <h1>23ºC</h1>
+                        <h1 style="color: black;">--</h1>
 
 
                     </div>
@@ -107,65 +116,76 @@
                     </div>
                 </div>
 
+                <!-- Setor A -->
+                
+                <div class="div_setor" id="setorA">
+                    <div class="card_setor">
 
-                <div class="div_setor">
-                    <div class="card_setor" id="setor1">
-                        <h2>Setor 1
-                            <img src="" id='img_erva_setor1' style="height:30px">
-                        
-                     
+                        <div class="faixa_setor">
+                            <h2>Setor 1
+                                <img src="" id='img_erva_setor1' style="height:30px">
+                            </h2>
+                        </div>
 
-                        </h2>
-                        <h2 id="setor1_registro">ºC  -  lm</h2>
-                       
+                        <h2 id="setor1_registro">-ºC - lm</h2>
+
                         <select id="in_erva" class="select_erva" onchange="mudar_erva()">
                             <option value="0"> -- Selecione erva --</option>
                             <option value="camomila"> Camomila </option>
                             <option value="babosa"> Babosa </option>
                             <option value="gengibre"> Gengibre </option>
-                            
+
                         </select>
                         <div class="div_canva">
                             <canvas id="c_grafico"></canvas>
                         </div>
-                       
+
                         <div>
                             <canvas></canvas>
                         </div>
-                       
 
                     </div>
-
 
                     <div class="card_setor" id="setor2">
-                        <h2>Setor 2</h2>
-<<<<<<< HEAD
-=======
-                        <select id="in_erva" class="select_erva" onchange="mudar_erva()">
-                            <option value="0"> -- Selecione erva --</option>
-                            <option value="camomila"> Camomila </option>
-                            <option value="babosa"> Babosa </option>
-                            <option value="gengibre"> Gengibre </option>
-                            
-                        </select>
 
+                        <div class="faixa_setor">
+                            <h2>Setor 2
+                                <img src="" id='img_erva_setor1' style="height:30px">
+                            </h2>
+                        </div>
 
-
->>>>>>> 2e39df1886689bdcecd5cb6082c0941615bc5d3f
                     </div>
-
 
                     <div class="card_setor" id="setor3">
-                        <h2>Setor 3</h2>
-
+                        <div class="faixa_setor">
+                            <h2>Setor 3
+                                <img src="" id='img_erva_setor1' style="height:30px">
+                            </h2>
+                        </div>
                     </div>
 
-
-                    <div class="card_setor" id="setor4">
-                        <h2>Setor 4</h2>
-
+                    
+                    <div class="card_setorVazio">
+                        <div class="faixa_setor">
+                            <h2>Adicionar Setor
+                                <img src="" id='img_erva_setor1' style="height:30px">
+                            </h2>
+                        </div>
                     </div>
+                    
                 </div>
+                <!-- Setor B -->
+                
+                
+                <div class="div_setor" id='setorB'>
+                    <div class="card_setorVazio">
+                        <div class="faixa_setorB">
+                            <h2>Adicionar Setor
+                                <img src="" id='img_erva_setor1' style="height:30px">
+                            </h2>
+                        </div>
+                    </div>
+
 
             </div>
 
@@ -185,7 +205,7 @@
     <!-- RODAPÉ -->
     <section id="footer">
 
-        <div class='rodape'>
+        <div class='rodape' id="id_divRodape">
             <div class='container'>
                 <div class='footer'>
                     <h3> CONTATO </h3>
@@ -223,175 +243,193 @@
 
     }
 
-    function display_cadastro() {
-        cadastro.style.display = 'block';
-        banner.style.display = 'none'
+
+    function exibirSetorA() {
+        setorA.style.display = 'grid';
+        setorB.style.display = 'none'
+        cardA.style.opacity = 1;
+        cardB.style.opacity =0.75
+    }
+    
+    function exibirSetorB() {
+        setorB.style.display = 'grid';
+        setorA.style.display= 'none';
+        cardB.style.opacity = 1;
+        cardA.style.opacity = 0.75;
+    }
+   
+
+
+    function mudar_erva() {
+        var erva = in_erva.value
+
+        document.getElementById('img_erva_setor1').src = `./_imgindex/${erva}.png`
     }
 
-    function hide_cadastro() {
-        cadastro.style.display = 'none';
-        banner.style.display = 'block'
+    function mostrar_menu() {
+
+        id_divMenu.style.width = '170px'
+        id_divDashboard.style.marginLeft = '170px'
+        id_divRodape.style.marginLeft = '170px'
+    }
+
+    function fechar_menu() {
+        id_divMenu.style.width = 0
+        id_divRodape.style.marginLeft = 0
+        id_divDashboard.style.marginLeft = 0
+
     }
 
 
-    function mudar_erva(){
-       var erva=in_erva.value
-       
-        document.getElementById('img_erva_setor1').src=`./_imgindex/${erva}.png`
-
-        
-    }
-
-
-
+    // Funções gráficos
     var config = {
-		type: 'line',
-		data: {
-			labels: [],
-			datasets: [{
-				label: 'Temperatura',
-				backgroundColor: window.chartColors.blue,
-				borderColor: window.chartColors.blue,
-				data: [],
-				fill: false,
-			}]
-		},
-		options: {
-			responsive: true,
-			title: {
-				display: true,
-				text: 'Gráfico de histórico de temperatura'
-			},
-			tooltips: {
-				mode: 'index',
-				intersect: false,
-			},
-			hover: {
-				mode: 'nearest',
-				intersect: true
-			},
-			scales: {
-				xAxes: [{
-					display: true,
-					scaleLabel: {
-						display: true,
-						labelString: 'Horário da Leitura'
-					}
-				}],
-				yAxes: [{
-					display: true,
-					scaleLabel: {
-						display: true,
-						labelString: 'ºC'
-					}
-				}]
-			}
-		}
-	};
+        type: 'line',
+        data: {
+            labels: [],
+            datasets: [{
+                label: 'Temperatura',
+                backgroundColor: window.chartColors.blue,
+                borderColor: window.chartColors.blue,
+                data: [],
+                fill: false,
+            }]
+        },
+        options: {
+            responsive: true,
+            title: {
+                display: true,
+                text: 'Gráfico de histórico de temperatura'
+            },
+            tooltips: {
+                mode: 'index',
+                intersect: false,
+            },
+            hover: {
+                mode: 'nearest',
+                intersect: true
+            },
+            scales: {
+                xAxes: [{
+                    display: true,
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Horário da Leitura'
+                    }
+                }],
+                yAxes: [{
+                    display: true,
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'ºC'
+                    }
+                }]
+            }
+        }
+    };
 
-	// esse "sortearTemperatura()" será desnecessário quando usarmos o backend futuramente
-	function sortearTemperatura() {
-		var limiteMin = -10;
-		var limiteMax = 70;
-		var minimoAbsoluto = Math.abs(limiteMin);
-		return (Math.random() * (minimoAbsoluto+limiteMax) - minimoAbsoluto).toFixed(1);
-	}
+    // esse "sortearTemperatura()" será desnecessário quando usarmos o backend futuramente
+    function sortearTemperatura() {
+        var limiteMin = -10;
+        var limiteMax = 70;
+        var minimoAbsoluto = Math.abs(limiteMin);
+        return (Math.random() * (minimoAbsoluto + limiteMax) - minimoAbsoluto).toFixed(1);
+    }
 
-	function recuperarDadosIniciais() {
+    function recuperarDadosIniciais() {
 
-		// esse "registros" será recuperado do backend futuramente
-		var registros = [
-			{
-				momento: '00:03:42',
-				leitura: sortearTemperatura()
-			},
-			{
-				momento: '00:03:52',
-				leitura: sortearTemperatura()
-			},
-			{
-				momento: '00:04:02',
-				leitura: sortearTemperatura()
-			},
-			{
-				momento: '00:04:12',
-				leitura: sortearTemperatura()
-			},
-			{
-				momento: '00:04:22',
-				leitura: sortearTemperatura()
-			},
-			{
-				momento: '00:04:32',
-				leitura: sortearTemperatura()
-			},
-			{
-				momento: '00:04:42',
-				leitura: sortearTemperatura()
-			}
-		];
+        // esse "registros" será recuperado do backend futuramente
+        var registros = [
+            {
+                momento: '00:03:42',
+                leitura: sortearTemperatura()
+            },
+            {
+                momento: '00:03:52',
+                leitura: sortearTemperatura()
+            },
+            {
+                momento: '00:04:02',
+                leitura: sortearTemperatura()
+            },
+            {
+                momento: '00:04:12',
+                leitura: sortearTemperatura()
+            },
+            {
+                momento: '00:04:22',
+                leitura: sortearTemperatura()
+            },
+            {
+                momento: '00:04:32',
+                leitura: sortearTemperatura()
+            },
+            {
+                momento: '00:04:42',
+                leitura: sortearTemperatura()
+            }
+        ];
 
-		var contador = 0;
+        var contador = 0;
 
-		// registros.length é a quantidade de itens em "registros"
-		while (contador < registros.length) {
+        // registros.length é a quantidade de itens em "registros"
+        while (contador < registros.length) {
 
-			config.data.labels.push(registros[contador].momento);  // incluir um novo momento
-			config.data.datasets[0].data.push(registros[contador].leitura);  // incluir uma nova leitura
+            config.data.labels.push(registros[contador].momento);  // incluir um novo momento
+            config.data.datasets[0].data.push(registros[contador].leitura);  // incluir uma nova leitura
 
-			contador++;
-		}
+            contador++;
+        }
 
-	}
-	
+    }
+
     function receberNovasLeituras() {
-		setTimeout(() => {
-			
-			// esses "agora" etc até "momentos" serão desnecessários quando usarmos o backend futuramente
-			var agora = new Date();
-			var hora = agora.getHours();
-			var minuto = agora.getMinutes();
-			var segundo = agora.getSeconds();
-			var momento = `${hora>9?'':'0'}${hora}:${minuto>9?'':'0'}${minuto}:${segundo>9?'':'0'}${segundo}`;
+        setTimeout(() => {
 
-			// esse "novoRegistro" será recuperado do backend futuramente
-			var novoRegistro = {
-				momento: momento,
-				leitura: sortearTemperatura()
-			};
-			
-			// tirando e colocando valores no gráfico
-			config.data.labels.shift(); // apagar o primeiro
-			config.data.labels.push(novoRegistro.momento); // incluir um novo momento
-			config.data.datasets[0].data.shift();  // apagar o primeiro
-			config.data.datasets[0].data.push(novoRegistro.leitura); // incluir uma nova leitura
+            // esses "agora" etc até "momentos" serão desnecessários quando usarmos o backend futuramente
+            var agora = new Date();
+            var hora = agora.getHours();
+            var minuto = agora.getMinutes();
+            var segundo = agora.getSeconds();
+            var momento = `${hora > 9 ? '' : '0'}${hora}:${minuto > 9 ? '' : '0'}${minuto}:${segundo > 9 ? '' : '0'}${segundo}`;
 
-			// Atualiza o gráfico
-			window.graficoLinha.update();	
+            // esse "novoRegistro" será recuperado do backend futuramente
+            var novoRegistro = {
+                momento: momento,
+                leitura: sortearTemperatura()
+            };
 
-			// agendar a chamada da mesma função para daqui a 7 segundos
-			receberNovasLeituras();	
+            // tirando e colocando valores no gráfico
+            config.data.labels.shift(); // apagar o primeiro
+            config.data.labels.push(novoRegistro.momento); // incluir um novo momento
+            config.data.datasets[0].data.shift();  // apagar o primeiro
+            config.data.datasets[0].data.push(novoRegistro.leitura); // incluir uma nova leitura
 
-            document.getElementById('setor1_registro').innerHTML=`${novoRegistro.leitura} ºC`
+            // Atualiza o gráfico
+            window.graficoLinha.update();
 
-		}, 1000); // 7000 ms -> 7 segundos
-	}
+            // agendar a chamada da mesma função para daqui a 7 segundos
+            receberNovasLeituras();
 
-	function plotarGrafico() {
-		// chamar os 7 últimos registros de leitura
-		recuperarDadosIniciais();
+            document.getElementById('setor1_registro').innerHTML = `${novoRegistro.leitura} ºC`
+
+        }, 4000); // 7000 ms -> 7 segundos
+    }
+
+    function plotarGrafico() {
+        // chamar os 7 últimos registros de leitura
+        recuperarDadosIniciais();
         receberNovasLeituras();
-		// criação do gráfico na página
-		var ctx = document.getElementById('c_grafico').getContext('2d');
-		window.graficoLinha = new Chart(ctx, config);
+        // criação do gráfico na página
+        var ctx = document.getElementById('c_grafico').getContext('2d');
+        window.graficoLinha = new Chart(ctx, config);
 
-		// função que agenda a recuperação da última leitura para daqui a 7 segundos
-		//receberNovasLeituras();
-	}
+        // função que agenda a recuperação da última leitura para daqui a 7 segundos
+        //receberNovasLeituras();
+    }
 
-	// indicando que a função "plotarGrafico" será invocada assim que a página carregar
-	window.onload = plotarGrafico;
+    // indicando que a função "plotarGrafico" será invocada assim que a página carregar
+    window.onload = plotarGrafico;
 
- 
+
 
 </script>
