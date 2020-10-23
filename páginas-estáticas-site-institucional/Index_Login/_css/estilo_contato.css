@@ -89,17 +89,39 @@ overflow: hidden;
     float: right;
 }
 
-/* Banner */
-.banner{
+/* FORMULÁRIO */
+
+.content {
     background-image: linear-gradient(rgba(134, 134, 134, 0.5), rgba(68, 67, 67, 0.5)),url('https://dratathianepitaluga.com.br/wp-content/uploads/2018/05/fitoterapia_topo.png');
     height: 95vh;
     background-size: 100% 100%;
-    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.banner_txt{
+.formulario {
+    width: 500px;
+    height: 300px;
+    background-color: rgb(0, 0, 0);
+    padding: 100px;
+    border-radius: 15px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    border-radius: 5px;
+}
+
+.div_higa {
+    position: relative;
+    top: 100px;
+}
+
+.form_txt{
     float: left;
-    text-align: center;
     position: relative;
     top: 50%;
     left: 50%;
@@ -107,6 +129,5 @@ overflow: hidden;
     z-index: 2;
     font-size: x-large;
     color: white;
-    font-family: raleway;
 }
 
