@@ -44,7 +44,7 @@ overflow: hidden;
     font-size: small;
     font-weight: bold;
     color: white;
-    background-color: #64d167;
+    background-color: #4ca34f;
 
     transition-duration: 0.4s;
 }
@@ -87,7 +87,27 @@ overflow: hidden;
 }
 
 .div_login span {
-    float: right;
+    margin-left: 350px;
+}
+
+#select_pefil {
+    position: relative;
+    background-color: white ;
+    border-color: #4ca34f;
+    padding: 4px;
+    font-size: 10px;
+    font-weight: bold;
+    color: black;
+    border-radius: 10px;
+    margin-left: 5px;
+}
+
+#select_perfil option {
+    background-color: white ;
+    padding: 7px;
+    font-size: 10px;
+    font-weight: bold;
+    color: black;
 }
 
 /* Banner */

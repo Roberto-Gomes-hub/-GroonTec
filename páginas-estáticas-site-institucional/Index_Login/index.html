@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Groontech</title>
     <link rel="stylesheet" href="_css/estilo.css">
+    <link rel="javascript" href="../../script.js">
 </head>
 
 
@@ -17,17 +18,27 @@
             <div class="container">
                 <img src="./Groontech-removebg.png" alt="Groontech">
                
+                
                 <button onclick= 'display_login()'>Login</button>
-                    <div id="div_result"></div>
+                <div id="div_result"></div>
                 
             
                 <div class= 'div_login' id= 'id_login' style="display: none;">
-                    <label for="email" style="font-size:14px"><b>Email:</b> </label>
+
+                <label for="email" style="font-size:14px"><b>Email:</b> </label>
                  <input id="in_email" type="text" placeholder="Email" name="email" required> 
                 
                     <label for="senha" style="font-size:14px"><b>Senha:</b></label>
-                    <input id="in_senha" type="password" placeholder="Senha" name="senha" required> <br>
+                    <input id="in_senha" type="password" placeholder="Senha" name="senha" required> 
+
+                    <select id='select_pefil'>
+                        <option value="1"> -- SELECIONAR SEU PERFIL --</option>
+                        <option value="2"> ADM </option>
+                        <option value="3"> TECNICO </option>
+                    </select> <br>
+
                     <span  style="font-size:10px">Esqueceu a senha</span>
+
                 </div>
 
                 <ul>
@@ -220,6 +231,7 @@
         else if (document.getElementById('id_login').style.display == "block") {
             if (email == '@gmail' && senha == 'groontech') {
                 window.location.href = '../Dashboards/Dashboards.html';
+                document.getElementById('div_ola').innerHTML = 'caralhos';
             }
             else if (email == '' && senha == '') {
                 alert(`preencha todos os campos`);

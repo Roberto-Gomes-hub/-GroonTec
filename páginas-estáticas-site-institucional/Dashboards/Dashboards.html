@@ -15,6 +15,7 @@
     </style>
     <title>Groontech</title>
     <link rel="stylesheet" href="estilo.css">
+    <link rel="javascript" href="../../script.js">
 </head>
 
 
@@ -26,16 +27,14 @@
             <div class="container">
                 <img src="./Groontech-removebg.png" alt="Groontech">
 
-                <button onclick='display_login ()'>Login</button>
-
-                <div class='div_login' id='id_login'>
+                <!-- <div class='div_login' id='id_login'>
                     <label for="email" style="font-size:14px"><b>Email:</b> </label>
                     <input type="text" placeholder="Email" name="email" required>
 
                     <label for="senha" style="font-size:14px"><b>Senha:</b></label>
                     <input type="password" placeholder="Senha" name="senha" required> <br>
                     <span style="font-size:10px">Esqueceu a senha</span>
-                </div>
+                </div> --> 
 
                 <ul>
                     <li><a href="../Index_Login/index.html">Home</a></li>
@@ -229,10 +228,7 @@
 </html>
 
 
-<script>
-
-
-
+<script> 
     function display_login() {
         // if (id_login.style.display == 'block') {
         //     alert('Oi, deu erro');
@@ -428,7 +424,4 @@
 
     // indicando que a função "plotarGrafico" será invocada assim que a página carregar
     window.onload = plotarGrafico;
-
-
-
 </script>
