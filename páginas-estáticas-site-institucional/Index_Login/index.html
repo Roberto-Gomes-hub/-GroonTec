@@ -17,19 +17,19 @@
         <div class="navbar">
             <div class="container">
                 <img src="./Groontech-removebg.png" alt="Groontech">
-               
-                
-                <button onclick= 'display_login()'>Login</button>
-                <div id="div_result"></div>
-                
-            
-                <div class= 'div_login' id= 'id_login' style="display: none;">
 
-                <label for="email" style="font-size:14px"><b>Email:</b> </label>
-                 <input id="in_email" type="text" placeholder="Email" name="email" required> 
-                
+
+                <button onclick='display_login()'>Login</button>
+                <div id="div_result"></div>
+
+
+                <div class='div_login' id='id_login' style="display: none;">
+
+                    <label for="email" style="font-size:14px"><b>Email:</b> </label>
+                    <input id="in_email" type="text" placeholder="Email" name="email" required>
+
                     <label for="senha" style="font-size:14px"><b>Senha:</b></label>
-                    <input id="in_senha" type="password" placeholder="Senha" name="senha" required> 
+                    <input id="in_senha" type="password" placeholder="Senha" name="senha" required>
 
                     <select id='select_pefil'>
                         <option value="1"> -- SELECIONAR SEU PERFIL --</option>
@@ -37,14 +37,14 @@
                         <option value="3"> TECNICO </option>
                     </select> <br>
 
-                    <span  style="font-size:10px">Esqueceu a senha</span>
+                    <span style="font-size:10px">Esqueceu a senha</span>
 
                 </div>
 
                 <ul>
                     <li><a href="">Home</a></li>
                     <li><a href="#section_sobre">Sobre<a></li>
-                    <li ><a href="./contato.html">Contato</a></li>
+                    <li><a href="./contato.html">Contato</a></li>
                     <li>Serviços</li>
                 </ul>
 
@@ -61,35 +61,41 @@
                 <h1>Groontech</h1>
                 <p>Soluções em monitoramento de estufas fitoterápicas</p>
 
-                
-                <button class="button_cadastro" onclick= 'display_cadastro ()'>Cadastre-se</button>
+
+                <button class="button_cadastro" onclick='display_cadastro ()'>Cadastre-se</button>
                 <button class="button_saiba">Saiba mais</button>
-                
+
             </div>
-                    <div class='div_cadastro' id="cadastro">
 
-                        <label for="email"><b>Email:</b> </label> <br>
-                        <input type="text" placeholder="Email" id="cad_email" name="email" required> <br>
 
-                        <label for="confemail"><b>Confirmar Email:</b> </label> <br>
-                        <input type="text" placeholder="Confirmar Email" id="cad_confirmEmail" name="confemail" required> <br>
+            <div class='div_cadastro' id="cadastro">
+                <div class='faixa'>
+                    <h3>Cadastro</h3>
+                </div>
 
-                        <label for="Razão social"><b>Razão social:</b> </label><br>
-                        <input type="text" placeholder="Razão social" id="cad_razaosoc" name="razaosoc" required> <br>
+                <label for="email"><b>Email:</b> </label> <br>
+                <input type="text"  id="cad_email" name="email" required> <br>
 
-                        <label for="cnpj"><b>CNPJ:</b> </label><br>
-                        <input type="number" placeholder="CNPJ" id="cad_cnpj" name="cnpj" required> <br>
-                
-                        <label for="senha"><b>Senha:</b></label><br>
-                        <input type="password" placeholder="Senha" id="cad_senha" name="senha" required> <br>
+                <label for="confemail"><b>Confirmar Email:</b> </label> <br>
+                <input type="text"  id="cad_confirmEmail" name="confemail" required> <br>
 
-                        <label for="senha"><b>Confirmar Senha:</b></label><br>
-                        <input type="password" placeholder="Confirmar Senha" id="cad_confirmaSenha" name="confsenha" required> <br>
+                <label for="Razão social"><b>Razão social:</b> </label><br>
+                <input type="text"  id="cad_razaosoc" name="razaosoc" required> <br>
 
-                        <button class="btnCad" onclick="cadastrar()">Cadastro</button> <br> 
-                        <button class="btnCad" onclick= 'hide_cadastro ()'>Voltar</button>
+                <label for="cnpj"><b>CNPJ:</b> </label><br>
+                <input type="number"  id="cad_cnpj" name="cnpj" required> <br>
 
-                    </div>
+                <label for="senha"><b>Senha:</b></label><br>
+                <input type="password" id="cad_senha" name="senha" required> <br>
+
+                <label for="senha"><b>Confirmar Senha:</b></label><br>
+                <input type="password" id="cad_confirmaSenha" name="confsenha" required>
+                <br>
+
+                <button class="btnCad" onclick="cadastrar()">Cadastro</button> <br>
+                <button class="btnCad" onclick='hide_cadastro ()'>Voltar</button>
+
+            </div>
         </div>
 
         <div class="break"></div>
@@ -166,8 +172,8 @@
                     <p id="calcule"></p>
                 </div>
             </div>
-           
-           
+
+
             <div class="column_sobre7"></div>
         </div>
     </section>
@@ -175,26 +181,26 @@
     <div class="break"></div>
 
     <!-- RODAPÉ -->
-<section id="footer">
+    <section id="footer">
 
-    <div class='rodape'>
-        <div class= 'container'>
-            <div class= 'footer'>
-                <h3> CONTATO </h3>
-                <ul>
-                <li>+55 (11) 4568-1234 </li>
-                <li>+55 (11) 91234-9876</li>
-                <li>groontech@suporte.com.br</li>
-            </ul>
-         
-           <div class="footer_right">  
-            <img src= '_imgindex/img_06_redes.png'>
-            
-           </div>
+        <div class='rodape'>
+            <div class='container'>
+                <div class='footer'>
+                    <h3> CONTATO </h3>
+                    <ul>
+                        <li>+55 (11) 4568-1234 </li>
+                        <li>+55 (11) 91234-9876</li>
+                        <li>groontech@suporte.com.br</li>
+                    </ul>
+
+                    <div class="footer_right">
+                        <img src='_imgindex/img_06_redes.png'>
+
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
-</section>
+    </section>
     <!-- criando paginas de logins idividuais -->
 
 </body>
@@ -209,22 +215,22 @@
 
         var resultado = in_faturamento.value * 0.15
         var estima = resultado * in_anos.value
-       
+
         calcule.innerHTML = `
         Seu faturamento anual é de R$${in_faturamento.value}, você terá um lucro de R$${resultado.toFixed(2)} ao ano. <br>
         Em ${in_anos.value} anos você vai obter R$${estima.toFixed(2)} em lucros!
         `;
     }
-    
+
     function display_login() {
         // if (id_login.style.display == 'block') {
         //     alert('Oi, deu erro');
         // }
-        
+
         var email = in_email.value;
         var senha = in_senha.value;
 
-        if (document.getElementById('id_login').style.display== 'none') {
+        if (document.getElementById('id_login').style.display == 'none') {
             document.getElementById('id_login').style.display = 'block';
         }
 
@@ -237,30 +243,30 @@
                 alert(`preencha todos os campos`);
             }
             else {
-                alert('email ou senha invalida')  
+                alert('email ou senha invalida')
             }
-        }  
-        else{
+        }
+        else {
             alert('asda')
         }
 
     }
-    
 
-    function display_cadastro () {
-        cadastro.style.display= 'block';
-        banner.style.display= 'none'
+
+    function display_cadastro() {
+        cadastro.style.display = 'block';
+        banner.style.display = 'none'
     }
 
-    function hide_cadastro () {
-        cadastro.style.display= 'none';
-        banner.style.display= 'block'
+    function hide_cadastro() {
+        cadastro.style.display = 'none';
+        banner.style.display = 'block'
     }
 
 
     function cadastrar() {
 
-        if(cad_cnpj.value == "" && cad_email.value == "" && cad_razaosoc.value == "" && cad_senha.value == ""){
+        if (cad_cnpj.value == "" && cad_email.value == "" && cad_razaosoc.value == "" && cad_senha.value == "") {
             alert('Preencha todos os campos para realizar o cadastro');
         }
         else if (cad_confirmEmail.value == "") {
