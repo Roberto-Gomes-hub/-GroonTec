@@ -17,10 +17,10 @@ create table usuario (
 ) auto_increment =100 ;
 
 insert into usuario values 
-	(null, '5', '448.663.458-95', '+55 11 22850583', 'gabi.foschini@gmail.com', 'gabi123', 'Técnico' ),
-    (null, '6', '450.088.456-35', '+55 11 25378986', 'yudi.lucas@gmail.com', 'yudi123', 'Técnico'),
-    (null, '7', '861.348.956.12', '+55 11 54807124', 'guilherme.soares@gmail.com', 'soares123', 'Adm' ),
-    (null, '8', '325.756.184-34', '+55 11 55338902', 'roberto.gomes@gmail.com', 'roberto123', 'Adm' );
+	(null, '1', '448.663.458-95', '+55 11 22850583', 'gabi.foschini@gmail.com', 'gabi123', 'Técnico' ),
+    (null, '2', '450.088.456-35', '+55 11 25378986', 'yudi.lucas@gmail.com', 'yudi123', 'Técnico'),
+    (null, '3', '861.348.956.12', '+55 11 54807124', 'guilherme.soares@gmail.com', 'soares123', 'Adm' ),
+    (null, '4', '325.756.184-34', '+55 11 55338902', 'roberto.gomes@gmail.com', 'roberto123', 'Adm' );
  
  select * from usuario;
  
@@ -47,10 +47,10 @@ create table estufa(
 ) auto_increment = 500;
 
 insert into estufa values 
-	(null, '5', 'Estufa A'),
-    (null, '6','Estufa B'),
-	(null, '7', 'Estufa A'),
-    (null, '8','Estufa Delta');
+	(null, '1', 'Estufa A'),
+    (null, '2','Estufa B'),
+	(null, '3', 'Estufa A'),
+    (null, '4','Estufa Delta');
     
     
     
@@ -61,15 +61,16 @@ create table Acesso (
     foreign key (fkUsuario) references usuario(idUsuario),
     visualizar varchar(3) default 'sim',
     editar varchar(3),
+    primary key (fkUsuario, fkEstufa),
     check (visualizar = "sim" or visualizar = "não"),
     check (editar = 'sim' or editar = 'não')
 );
 
 insert into Acesso values
-('100', '5', null, 'sim'),
-('101' ,'6', null , 'não'),
-('102', '7', 'não', 'sim'),
-('103', '8', 'não', 'não');
+('104', '500', default , 'sim'),
+('105' ,'501', default , 'não'),
+('106', '502', 'não', 'sim'),
+('107', '503', 'não', 'não');
 
 
 create table erva (
@@ -80,6 +81,11 @@ create table erva (
     tempMax float not null,
     tempMin float not null
 );
+insert into erva values 
+	(null, 'Babosa', 'Aloe vera', 'O clima da babosa é equatorial, tropical e subtropical. Ela trata feridas, queimaduras e inflamacoes na pele.', 40 , 18 ),
+    (null, 'Camomila', 'Matricaria chamomilla', 'O clima da camomila é temperado, frio e úmido. Ela trata ansiedade e insônia.', 22, 18 ),
+	(null, 'Gengibre', 'Zingiber officinale', 'O clima do gengibre é tropical e subtropical. Ele trata rouquidão e problemas na garganta.', 35, 17);
+
 
 create table Setor (
 	idSetor int primary key auto_increment,
@@ -90,18 +96,18 @@ create table Setor (
     nomeSetor varchar(45)
 );
 
-insert into erva (fkdesc,fkestufa,setor) values
-	(1,500,'Setor Alfa'),
-	(2,500,'Setor Beta'),
-    (1,501,'Setor Azul'),
-    (3,501,'Setor Vermelho'),
-    (3,502,'Setor Alfa'),
-    (1,502,'Setor Beta'),
-    (2,502,'Setor Delta'),
-    (1,503,'Setor 1'),
-    (2,503,'Setor 2'),
-    (3,504,'Setor do soso'),
-    (1,505,'Setor 404');
+insert into setor (idSetor, fkerva, fkestufa, nomeSetor)  values
+	(null, '1','500','Setor Alfa'),
+	(null, '2','500','Setor Beta'),
+    (null, '1','501','Setor Azul'),
+    (null, '3','501','Setor Vermelho'),
+    (null, '3','502','Setor Alfa'),
+    (null, '1','502','Setor Beta'),
+    (null, '2','502','Setor Delta'),
+    (null, '1','503','Setor 1'),
+    (null, '2','503','Setor 2'),
+    (null, '3','502','Setor do soso'),
+    (null, '1','500','Setor 404');
     
 create table sensor (
 	idSensor int primary key auto_increment,
@@ -112,18 +118,18 @@ create table sensor (
     check (statusSensor='ativo' or statusSensor='inativo'),
     check (tiposensor ='luminosidade' or tiposensor = 'temperatura')
 )   auto_increment=1000;
-
-insert into sensor (tiposensor,statusSensor,fkerva) values
-	('temperatura','ativo',1),
-	('temperatura','ativo',2),
-    ('temperatura','ativo',3),
-    ('temperatura','ativo',4),
-	('temperatura','ativo',7),
-	('temperatura','ativo',6),
-    ('temperatura','ativo',8),
-   	('temperatura','ativo',10),
-    ('temperatura','ativo',11), 
-    ('temperatura','ativo',9);
+select * from setor;
+insert into sensor  values
+	(null, 'temperatura','ativo',1),
+	(null, 'temperatura','ativo',2),
+    (null, 'temperatura','ativo',3),
+    (null,'temperatura','ativo',4),
+	(null,'temperatura','ativo',7),
+	(null,'temperatura','ativo',6),
+    (null,'temperatura','ativo',8),
+   	(null,'temperatura','ativo',10),
+    (null,'temperatura','ativo',11), 
+    (null,'temperatura','ativo',9);
     
     select * from sensor;
     
@@ -151,12 +157,7 @@ insert into sensor (tiposensor,statusSensor,fkerva) values
     
     
     -- Inserção de dados
-    
-insert into descricao values
-	(null, 'Babosa', 'Aloe vera', 'O clima da babosa é equatorial, tropical e subtropical. Ela trata feridas, queimaduras e inflamacoes na pele.', 40 , 18),
-    (null, 'Camomila', 'Matricaria chamomilla', 'O clima da camomila é temperado, frio e úmido. Ela trata ansiedade e insônia.', 22, 18 ),
-	(null, 'Gengibre', 'Zingiber officinale', 'O clima do gengibre é tropical e subtropical. Ele trata rouquidão e problemas na garganta.', 35, 17);
-    
+        
     
 
 select * from usuario;    
@@ -166,13 +167,14 @@ select * from empresa;
 select * from sensor;
 select * from registro;
 select * from acesso;
+select * from setor;
 
 
 select 
-	usuario.razaoSocial,
-    descricao.nome as 'erva plantada',
+	usuario.perfil,
+    erva.nome as 'erva plantada',
     estufa.nomeEstufa,
-    erva.setor,
+    setor.nomeSetor,
     sensor.statusSensor as 'Status do Sensor',
     sensor.tiposensor as 'Tipo de Sensor',
     sensor.idsensor,
@@ -180,21 +182,22 @@ select
     registro.Medida
 	from 
 		usuario,
-		descricao,
-		estufa,
 		erva,
+		estufa,
+		setor,
 		sensor,
-		registro
+		registro,
+        acesso
 	where
-		idUsuario=fkusuario 	
+		idUsuario=fkUsuario 	
 	and
-		idestufa=fkEstufa
+		idestufa=setor.fkEstufa
 	and
-		idDesc=fkdesc
+		iderva=fkerva
 	and
 		idsensor=fksensor
 	and
-		iderva=fkerva;
+		idSetor=fksetor;
         
 
-		
+drop database groontech;
