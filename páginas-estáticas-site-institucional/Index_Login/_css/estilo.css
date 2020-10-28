@@ -346,21 +346,82 @@ overflow: hidden;
     line-height: 30px;
 }
 
+.card_conteudo{
+    height: 330px;
+    margin: 50px 89px 50px 109px;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2), 0 2px 5px 0 rgba(0, 0, 0, 0.19);
+    /* background-color: black; */
+    padding: 50px;
+    text-align: center;
+}
+.card_conteudo h1{
+    margin-top: 0px;
+}
+.card_conteudo div{
+    /* color: black; */
+    display: inline-block;
+    background-color: rgba(121, 178, 16, 0.651);
+    width: 25%;
+    height: 225px;
+    margin: 20px;
+    border-radius: 20px;
+    text-align: center;
+}
+.card_conteudo div img{
+    height: 15px;
+}
+.card_conteudo div i{
+    margin-bottom: 15px;
+}
+
+#simulador {
+    position: relative;
+    background-color: white ;
+    border-color: #4ca34f;
+    padding: 7px;
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+    border-radius: 10px;
+    margin-left: 5px;
+}
+
+#simulador option {
+    background-color: white ;
+    padding: 7px;
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+}
+
 .sim_button{    
     border-style: none;
     padding: 0px 27px 10px;
-    border-radius: 8px;
-    
+    border-radius: 8px;    
     vertical-align: middle;
     font-size: small;
     font-weight: bold;
     color: white;
     background-color: #82db85;
-
     transition-duration: 0.4s;
 }
 
 .sim_button:hover{
+    background-color: #4ca34f;
+}
+.button_sim{    
+    border-style: none;
+    padding: 11px 27px 10px;
+    border-radius: 8px;    
+    vertical-align: middle;
+    font-size: small;
+    font-weight: bold;
+    color: white;
+    background-color: #82db85;
+    transition-duration: 0.4s;
+}
+
+.button_sim:hover{
     background-color: #4ca34f;
 }
 #calcule{

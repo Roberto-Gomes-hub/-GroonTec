@@ -7,6 +7,7 @@
     <title>Groontech</title>
     <link rel="stylesheet" href="_css/estilo.css">
     <link rel="javascript" href="../../script.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 
@@ -42,7 +43,7 @@
                 </div>
 
                 <ul>
-                    <li><a href="">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="#section_sobre">Sobre<a></li>
                     <li><a href="./contato.html">Contato</a></li>
                     <li>Serviços</li>
@@ -172,12 +173,59 @@
                     <p id="calcule"></p>
                 </div>
             </div>
+    </section>
 
 
-            <div class="column_sobre7"></div>
+    <section class="card_conteudo ">
+        <h1>Planos</h1>
+        <div class="card">
+            <h3>Básico</h3>
+            <i class="fa fa-user"> 1 adm</i><br>
+            <i class="fa fa-users"> 10 usuarios </i><br>
+            <i class="fa fa-thermometer-half"> 20 sensores de temperatura</i><br>
+            <i class="fa"><img src="./_imgindex/lux.png">  10 sensores de luminosidade</i>
+        </div>
+        <div class="card">
+            <h3>Padrão</h3>
+            <i class="fa fa-user"> 5 adm</i><br>
+            <i class="fa fa-users"> 20 usuarios </i><br>
+            <i class="fa fa-thermometer-half"> 50 sensores de temperatura</i><br>
+            <i class="fa"><img src="./_imgindex/lux.png">  25 sensores de luminosidade</i>
+        </div>
+        <div class="card">
+            <h3>Premium</h3>
+            <i class="fa fa-user"> 10 adm</i><br>
+            <i class="fa fa-users"> 30 usuarios </i><br>
+            <i class="fa fa-thermometer-half"> 100 sensores de temperatura</i><br>
+            <i class="fa"><img src="./_imgindex/lux.png">  50 sensores de luminosidade</i>
         </div>
     </section>
 
+    <div class="column_sobre7"></div>
+</div>
+
+<div class='div_sobre'>
+    <div class="column_sobre7"></div>
+
+    <div class='column_sobre61'>
+        <div class='div61_1' style='background-color: rgba(121, 178, 16, 0.651); height: 500px;'>
+            <h2 style="margin-top: 0;">Veja o valor de cada plano</h1>
+                <select id="simulador">
+                    <option value="">Básico</option>
+                    <option value="">Padrão</option>
+                    <option value="">Premium</option>
+                </select><br><br>
+                <button class="button_sim" onclick="simular()">Calcular</button>
+        </div>
+    </div>
+
+    <div class='column_sobre25'>
+        <div style="background-image: url(./_imgindex/folha.png); height: 500px;"></div>
+    </div>            
+
+
+    <div class="column_sobre7"></div>
+</div>
     <div class="break"></div>
 
     <!-- RODAPÉ -->
